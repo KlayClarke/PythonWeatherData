@@ -10,8 +10,8 @@ import pandas
 #             temperatures.append(int(temp_num))
 
 data = pandas.read_csv('weather_data.csv')
-data_frame = data
-data_series = data['temp']
 
-print(data_frame)
-print(data_series)
+
+data_dict = data.to_dict()
+print(data_dict)
+
