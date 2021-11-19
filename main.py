@@ -9,19 +9,29 @@ import pandas
 #         if temp_num != 'temp':
 #             temperatures.append(int(temp_num))
 
-data = pandas.read_csv('weather_data.csv')
+# data = pandas.read_csv('weather_data.csv')
 
 # data_dict = data.to_dict()
 # print(data_dict)
 
-monday_data = data[data.day == 'Monday']
+# monday_data = data[data.day == 'Monday']
+#
+# monday_temp = monday_data.temp
+# print(monday_temp)
+#
+#
+# def celsius_to_fahrenheit(cel_temp):
+#     return (cel_temp * 9/5) + 32
+#
+#
+# print(celsius_to_fahrenheit(monday_temp))
 
-monday_temp = monday_data.temp
-print(monday_temp)
 
+data_dict = {
+    'students': ['Amy', 'James', 'Angela'],
+    'scores': [76, 56, 65]
+}
 
-def celsius_to_fahrenheit(cel_temp):
-    return (cel_temp * 9/5) + 32
+scores_data = pandas.DataFrame(data_dict)
 
-
-print(celsius_to_fahrenheit(monday_temp))
+print(scores_data)
