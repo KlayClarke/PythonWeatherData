@@ -14,13 +14,10 @@ data = pandas.read_csv('weather_data.csv')
 # data_dict = data.to_dict()
 # print(data_dict)
 
-total_temp = 0
-
 list_of_temps = data['temp'].to_list()
-for temp in list_of_temps:
-    total_temp += temp
 
-average_temp = total_temp / len(list_of_temps)
+average_temp = sum(list_of_temps) / len(list_of_temps)
+
 print(average_temp)
 
 
