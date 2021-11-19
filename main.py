@@ -14,7 +14,14 @@ data = pandas.read_csv('weather_data.csv')
 # data_dict = data.to_dict()
 # print(data_dict)
 
-highest_temp_day = data[data.temp == data.temp.max()]
-print(highest_temp_day)
+monday_data = data[data.day == 'Monday']
+
+monday_temp = monday_data.temp
+print(monday_temp)
 
 
+def celsius_to_fahrenheit(cel_temp):
+    return (cel_temp * 9/5) + 32
+
+
+print(celsius_to_fahrenheit(monday_temp))
