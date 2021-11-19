@@ -14,8 +14,7 @@ data = pandas.read_csv('weather_data.csv')
 # data_dict = data.to_dict()
 # print(data_dict)
 
-average = data['temp'].mean()
-
-print(average)
+max_value = data['temp'].max()
+print(max_value)
 
 
