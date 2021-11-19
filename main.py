@@ -14,7 +14,7 @@ data = pandas.read_csv('weather_data.csv')
 # data_dict = data.to_dict()
 # print(data_dict)
 
-friday_row = data[data.day == 'Friday']
-print(friday_row)
+highest_temp_day = data[data.temp == data.temp.max()]
+print(highest_temp_day)
 
 
