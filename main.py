@@ -11,7 +11,9 @@ import pandas
 
 data = pandas.read_csv('weather_data.csv')
 
+# data_dict = data.to_dict()
+# print(data_dict)
 
-data_dict = data.to_dict()
-print(data_dict)
+list_of_temps = data['temp'].to_list()
+print(list_of_temps)
 
